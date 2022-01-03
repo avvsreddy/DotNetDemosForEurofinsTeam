@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             // draw red rect
-            new Task(() =>
+            new Thread(() =>
             {
                 Graphics g = panel2.CreateGraphics();
                 Random rnd = new Random();
