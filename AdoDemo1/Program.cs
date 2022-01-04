@@ -30,23 +30,19 @@ namespace AdoDemo1
 
             // perform crud operations
 
-            Contact c = new Contact();
-            Console.Write("Enter Contact Name: ");
-            c.Name = Console.ReadLine();
-            Console.Write("Enter Mobile: ");
-            c.Mobile = Console.ReadLine();
-            Console.Write("Enter Email: ");
-            c.Email = Console.ReadLine();
-            Console.Write("Location: ");
-            c.Location = Console.ReadLine();
-            Console.Write("Enter DOB: ");
-            c.Dob = Console.ReadLine();
+           
 
             IContactsRepository repo = new ContactsRepository();
-
-
-            if (repo.SaveContact(c))
-                Console.WriteLine("Contact saved....");
+            try
+            {
+                Contact c = repo.GetContactById(1);
+                Console.WriteLine(c.Name);
+                Console.WriteLine(c.Location);
+            }
+            catch(ContactNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         

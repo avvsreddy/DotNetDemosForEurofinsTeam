@@ -12,6 +12,18 @@ namespace AdoDemo1.DataAccess
         bool SaveContact(Contact contact);
         bool DeleteContact(int contactId);
         bool UpdateContact(int contactId, Contact modifiedContact);
+        /// <summary>
+        /// searches contact by id
+        /// </summary>
+        /// <param name="contactId"></param>
+        /// <returns>contact object</returns>
+        /// <exception cref="ContactNotFoundException"/>
+        Contact GetContactById(int contactId);
+        List<Contact> GetContacts();
+        List<Contact> GetContactsByLocation(string location);
+        List<Contact> GetContactsBornedToday();
+
+        List<Contact> GetContactsBornedThisMonth();
 
     }
 }
