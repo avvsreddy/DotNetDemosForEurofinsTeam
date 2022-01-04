@@ -25,5 +25,14 @@ namespace AdoDemo1.DataAccess
 
         List<Contact> GetContactsBornedThisMonth();
 
+        /// <summary>
+        /// transfer amount from fromAccNo to toAccNo provided sufficcient balance in source account otherwise throws appropriate exp
+        /// </summary>
+        /// <param name="fromAccNo"></param>
+        /// <param name="toAccNo"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        bool FundTransfer(int fromAccNo, int toAccNo, int amount);
+
     }
 }

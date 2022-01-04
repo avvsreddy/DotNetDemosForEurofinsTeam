@@ -33,16 +33,14 @@ namespace AdoDemo1
            
 
             IContactsRepository repo = new ContactsRepository();
-            try
-            {
-                Contact c = repo.GetContactById(1);
-                Console.WriteLine(c.Name);
-                Console.WriteLine(c.Location);
-            }
-            catch(ContactNotFoundException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            Contact c = new Contact();
+            c.Name = "test1";
+            c.Email = "email";
+            c.Dob = "12/12/1990";
+            c.Location = "loc";
+            c.Mobile = "234234234";
+            
+            repo.SaveContact(c);
         }
 
         
