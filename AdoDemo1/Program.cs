@@ -30,17 +30,16 @@ namespace AdoDemo1
 
             // perform crud operations
 
-           
-
-            IContactsRepository repo = new ContactsRepository();
-            Contact c = new Contact();
-            c.Name = "test1";
-            c.Email = "email";
-            c.Dob = "12/12/1990";
-            c.Location = "loc";
-            c.Mobile = "234234234";
-            
-            repo.SaveContact(c);
+            try
+            {
+                IContactsRepository repo = new ContactsRepository();
+                repo.FundTransfer(111, 222, 1000);
+                Console.WriteLine("Successfully funds transfered");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         

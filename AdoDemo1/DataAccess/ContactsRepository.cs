@@ -177,7 +177,44 @@ namespace AdoDemo1.DataAccess
 
         public bool FundTransfer(int fromAccNo, int toAccNo, int amount)
         {
-            throw new NotImplementedException();
+            
+            IDbConnection conn = GetConnection();
+            string update1 = $"update accounts set balance = balance - {amount} where accountno = {fromAccNo}";
+            string update2 = $"update accounts set balance = balance + {amount} where accountno = {toAccNo}";
+            IDbCommand cmd1 = conn.CreateCommand();
+            cmd1.CommandText = update1;
+            cmd1.Connection = conn;
+            IDbCommand cmd2 = conn.CreateCommand();
+            cmd2.CommandText = update2;
+            cmd2.Connection = conn;
+            int count = 0;
+            IDbTransaction tx = null;
+            try
+            {
+                conn.Open();
+                tx = conn.BeginTransaction();
+                cmd1.Transaction = tx;
+                cmd2.Transaction = tx;
+                count += cmd1.ExecuteNonQuery();
+                Console.WriteLine("Amount reduced from sender account");
+                throw new Exception("Server error");
+                count += cmd2.ExecuteNonQuery();
+                Console.WriteLine("Amount increased into receiver account");
+                Console.WriteLine("Transaction Completed");
+                tx.Commit();
+            }
+            catch(Exception ex)
+            {
+                tx.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return count == 2;
+
+
         }
     }
 }
