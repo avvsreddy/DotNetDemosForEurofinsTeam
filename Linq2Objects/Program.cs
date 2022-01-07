@@ -50,7 +50,17 @@ namespace Linq2Objects
 
             // Lab 10: Get all the products average price belongs to Apple brand
 
-
+            // Lab 11: Show the costliest product name
+            
+            // Lab 12: Show the cheapest product name and its price
+            
+            // Lab 13: Show the 2nd and 3rd product details
+            
+            // Lab 14: List all products in assending order of their price
+            
+            // Lab 15: Show which catagory has costly product
+            
+            // Lab 16: Show which catagory has less products
 
         }
     }
