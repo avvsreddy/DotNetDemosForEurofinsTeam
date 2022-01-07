@@ -27,7 +27,7 @@ namespace ContactsManagementWindowsFormsApp.DataAccess
         public void UpdateContacts(DataSet ds)
         {
             SqlCommandBuilder cb = new SqlCommandBuilder(da);
-          
+           
             da.Update(ds,"contacts");
         }
     }
