@@ -10,17 +10,47 @@ namespace Linq2Objects
     {
         static void Main(string[] args)
         {
-            // Get All Products whose price is more than 90k
+            //Example 1: Get All Products whose price is more than 80k
             ProductsRepository repo = new ProductsRepository();
             var result1 = from p in repo.GetProducts()
                           where p.Price >= 80000
                           select p;
+            //todo: get with extention methods
 
 
             foreach (var item in result1)
             {
                 Console.WriteLine($"{item.Name}\t{item.Price}");
             }
+
+            // Example 2: Get all products in stock
+            var result2 = repo.GetProducts().Where(p => p.InStock);
+            result2 = from p in repo.GetProducts()
+                      where p.InStock == true
+                      select p;
+
+            // Example 3: Get only the name of all products
+            var result3 = from p in repo.GetProducts()
+                          select p.Name;
+
+            //todo: get with extention methods
+
+
+            // Lab 4: Get only the name and price of all the products
+
+            // Lab 5: Get total price of all the products in stock
+
+            // Lab 6: Get total count of all the prudcts whose price is less than 50k
+
+            // Lab 7: Get Name of the product and Name of the catagory
+
+            // Lab 8: Get all the products belogns to Laptops catagory
+
+            // Lab 9: Get all the products total price belogs to mobiels
+
+            // Lab 10: Get all the products average price belongs to Apple brand
+
+
 
         }
     }
