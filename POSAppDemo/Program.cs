@@ -133,6 +133,12 @@ namespace POSAppDemo
     }
 
     // add any new code
-
-
+    public class USTaxCalculatorAdapter : ITaxCalculator
+    {
+        public double CalculateTax(double amount)
+        {
+            USTaxCalculator adaptoee = new USTaxCalculator();
+            return adaptoee.ComputeTax((float)amount);
+        }
+    }
 }
