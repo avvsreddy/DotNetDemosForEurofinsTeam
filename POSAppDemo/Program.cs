@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace POSAppDemo
         {
             POSBillingSystem billingSystem = new POSBillingSystem();
             billingSystem.GenerateBill("TN");
+            Console.ReadLine();
         }
     }
 
@@ -25,8 +27,15 @@ namespace POSAppDemo
             // 2. calculate the discount
             // 3. apply any coupns
             // 4. calculate the sales tax
-            ITaxCalculator taxCalculator = new APTaxCalculator();
-            double taxAmt = taxCalculator.CalculateTax(amount);
+            TaxCalculatorFactory factory1 = new TaxCalculatorFactory();
+            Console.WriteLine("Factory 1" + factory1.GetHashCode());
+
+            TaxCalculatorFactory factory2 = new TaxCalculatorFactory();
+            Console.WriteLine("Factory 2" + factory2.GetHashCode());
+
+            //ITaxCalculator taxCalculator = factory.CreateTaxCalculator();
+            //ITaxCalculator taxCalculator = TaxCalculatorFactory.CreateTaxCalculator();
+            //double taxAmt = taxCalculator.CalculateTax(amount);
             // 5. generate the bill
             // 6. process the payment
         }
@@ -35,16 +44,13 @@ namespace POSAppDemo
 
     class TaxCalculatorFactory
     {
-        public ITaxCalculator CreateTaxCalculator(string state)
+        public virtual ITaxCalculator CreateTaxCalculator()
         {
-            if (state == "KA")
-                return new KATaxCalculator();
-            else if (state == "AP")
-                return new APTaxCalculator();
-            else if (state == "TN")
-                return new TNTaxCalculator();
-            else
-                return null;
+            string taxCalcClass = ConfigurationManager.AppSettings["TAXCALC"];
+            // use reflextion
+            Type theType = Type.GetType(taxCalcClass);
+            ITaxCalculator taxCalculator= (ITaxCalculator)Activator.CreateInstance(theType);
+            return taxCalculator;
         }
     }
 
