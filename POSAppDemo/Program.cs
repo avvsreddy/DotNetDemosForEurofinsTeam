@@ -27,15 +27,15 @@ namespace POSAppDemo
             // 2. calculate the discount
             // 3. apply any coupns
             // 4. calculate the sales tax
-            TaxCalculatorFactory factory1 = new TaxCalculatorFactory();
-            Console.WriteLine("Factory 1" + factory1.GetHashCode());
+            //TaxCalculatorFactory factory1 = TaxCalculatorFactory.Instance;
+            //Console.WriteLine("Factory 1 " + factory1.GetHashCode());
 
-            TaxCalculatorFactory factory2 = new TaxCalculatorFactory();
-            Console.WriteLine("Factory 2" + factory2.GetHashCode());
+            //TaxCalculatorFactory factory2 = TaxCalculatorFactory.Instance;
+            //Console.WriteLine("Factory 2 " + factory2.GetHashCode());
 
-            //ITaxCalculator taxCalculator = factory.CreateTaxCalculator();
+            ITaxCalculator taxCalculator = TaxCalculatorFactory.Instance.CreateTaxCalculator();
             //ITaxCalculator taxCalculator = TaxCalculatorFactory.CreateTaxCalculator();
-            //double taxAmt = taxCalculator.CalculateTax(amount);
+            double taxAmt = taxCalculator.CalculateTax(amount);
             // 5. generate the bill
             // 6. process the payment
         }
@@ -44,6 +44,13 @@ namespace POSAppDemo
 
     class TaxCalculatorFactory
     {
+        private TaxCalculatorFactory()
+        {
+
+        }
+
+        public static  readonly TaxCalculatorFactory Instance = new TaxCalculatorFactory();
+        
         public virtual ITaxCalculator CreateTaxCalculator()
         {
             string taxCalcClass = ConfigurationManager.AppSettings["TAXCALC"];
@@ -112,6 +119,20 @@ namespace POSAppDemo
 
         }
     }
+
+
+    // purchased code
+
+    public class USTaxCalculator
+    {
+        public float ComputeTax(float amount)
+        {
+            Console.WriteLine("Using US Tax Calculator");
+            return 100.90f;
+        }
+    }
+
+    // add any new code
 
 
 }
