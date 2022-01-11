@@ -19,10 +19,34 @@ namespace ManageContactsDBFirst
             // Insert new contact
             // write only oo code
             ContactsEDMModel db = new ContactsEDMModel();
-            Contact c = new Contact { Name = "Rohit", Email = "rohith@mail.com", Location = "Bangalore", Mobile = "234234234", Dob = new DateTime(2000, 10, 20) };
-            db.Contacts.Add(c);
+
+            // get all contacts
+            // linq to entities
+
+            //var contacts = from c in db.Contacts
+            //               select c;
+            //// display all contact names
+
+            //foreach (var item in contacts)
+            //{
+            //    Console.WriteLine(item.Name);
+            //}
+
+            // change sachin's mobile number
+
+            // get sachin's object from dbset
+
+            //var sachin = (from c in db.Contacts
+            //             where c.ContactID == 1
+            //             select c).FirstOrDefault();
+            //sachin.Mobile = "99999999";
+            //db.SaveChanges();
+
+            // get ramesh's object
+
+            var ramesh = db.Contacts.Find(5);
+            db.Contacts.Remove(ramesh);
             db.SaveChanges();
-            Console.WriteLine("Contact saved....");
         }
     }
 }

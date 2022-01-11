@@ -93,6 +93,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB First Approach", "DB Fir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageContactsDBFirst", "ManageContactsDBFirst\ManageContactsDBFirst.csproj", "{FF8D912C-0DB0-4A5D-A509-00BDC2FB42FD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code First Approach", "Code First Approach", "{5239939D-D650-4FC3-BBED-2D86770CAA34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageProductsCodeFirst", "ManageProductsCodeFirst\ManageProductsCodeFirst.csproj", "{7591E92C-1C5C-4F41-88A9-1E50A1E19D6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,6 +219,10 @@ Global
 		{FF8D912C-0DB0-4A5D-A509-00BDC2FB42FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF8D912C-0DB0-4A5D-A509-00BDC2FB42FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF8D912C-0DB0-4A5D-A509-00BDC2FB42FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7591E92C-1C5C-4F41-88A9-1E50A1E19D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7591E92C-1C5C-4F41-88A9-1E50A1E19D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7591E92C-1C5C-4F41-88A9-1E50A1E19D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7591E92C-1C5C-4F41-88A9-1E50A1E19D6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -250,6 +258,8 @@ Global
 		{E499C42B-CA66-45BE-B55E-6858851989F8} = {E1C7DFFB-4AF9-4DDA-9BE0-EB9B268B065F}
 		{2B2125AF-F285-4038-BB61-0F90770230A4} = {87EA31F0-635A-4F08-A9FA-E02DE6B2B3EA}
 		{FF8D912C-0DB0-4A5D-A509-00BDC2FB42FD} = {2B2125AF-F285-4038-BB61-0F90770230A4}
+		{5239939D-D650-4FC3-BBED-2D86770CAA34} = {87EA31F0-635A-4F08-A9FA-E02DE6B2B3EA}
+		{7591E92C-1C5C-4F41-88A9-1E50A1E19D6F} = {5239939D-D650-4FC3-BBED-2D86770CAA34}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5787D6D9-8110-420F-B91A-4B02B06EF8A7}
