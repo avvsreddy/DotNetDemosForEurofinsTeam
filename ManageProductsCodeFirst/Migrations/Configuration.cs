@@ -10,7 +10,6 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "ManageProductsCodeFirst.DataAccess.ProductsDBContext";
         }
 
         protected override void Seed(ManageProductsCodeFirst.DataAccess.ProductsDBContext context)
