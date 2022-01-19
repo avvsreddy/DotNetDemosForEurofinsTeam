@@ -23,7 +23,7 @@ namespace CoolProductsClientCatalog
         public static void ShowAllProductsInStock()
         {
             HttpClient httpClient = new HttpClient();
-            HttpResponseMessage response = httpClient.GetAsync("http://localhost:60905/api/coolproducts/instock").Result;
+            HttpResponseMessage response = httpClient.GetAsync("http://localhost:60905/api/v2/coolproducts/instock").Result;
             if(response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 List<Product> products = response.Content.ReadAsAsync<List<Product>>().Result;

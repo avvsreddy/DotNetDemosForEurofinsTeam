@@ -20,6 +20,7 @@ namespace CoolProductsService.Models.DataAccess
 
         public bool InStock { get; set; }
 
+
         public int? Catagory_CatagoryId { get; set; }
     }
 }
