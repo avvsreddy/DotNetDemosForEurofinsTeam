@@ -6,10 +6,12 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using System.Web.Http.OData;
 
 namespace CoolProductsService.Controllers
 {
-
+    //[EnableCors("*", "*", "*")]
     [RoutePrefix("api/coolproducts")]
     public class CoolProductsController : ApiController
     {
@@ -18,14 +20,19 @@ namespace CoolProductsService.Controllers
 
         // GET: api/coolproducts - Return list of products
 
-        public List<Product> GetProducts()
+        //[EnableCors("*","*","*")]
+
+
+        [EnableQuery]
+        public IQueryable<Product> GetProducts()
         {
-            return db.Products.ToList();
+            return db.Products.AsQueryable();
         }
 
 
         // GET: api/coolproducts/1 - return a product by product id
 
+        
         public IHttpActionResult GetProductById(int id)
         {
             var p = db.Products.Find(id);

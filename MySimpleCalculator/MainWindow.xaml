@@ -1,0 +1,23 @@
+﻿<Window x:Class="MySimpleCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MySimpleCalculator"
+        mc:Ignorable="d"
+        Title="My Simple Calculator" 
+        Height="250" Width="400">
+    <Grid Margin="0,0,0,4">
+        <Label x:Name="label" Content="Enter First Number" HorizontalAlignment="Left" Margin="64,65,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Enter Second Number" HorizontalAlignment="Left" Margin="64,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.264,-2.916"/>
+        <TextBox x:Name="txtFno" HorizontalAlignment="Left" Height="23" Margin="230,69,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtSno" HorizontalAlignment="Left" Height="23" Margin="230,118,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="230,184,0,0" VerticalAlignment="Top" Width="43" RenderTransformOrigin="-4.133,3.65" Click="FindSum"/>
+        <Button x:Name="btnSubtract" Content="Subtract" HorizontalAlignment="Left" Margin="301,184,0,0" VerticalAlignment="Top" Width="49" RenderTransformOrigin="0.184,0.7"/>
+
+
+
+    </Grid>
+
+   
+</Window>
