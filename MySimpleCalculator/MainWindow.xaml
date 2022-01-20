@@ -12,8 +12,19 @@
         <Label x:Name="label1" Content="Enter Second Number" HorizontalAlignment="Left" Margin="64,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.264,-2.916"/>
         <TextBox x:Name="txtFno" HorizontalAlignment="Left" Height="23" Margin="230,69,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtSno" HorizontalAlignment="Left" Height="23" Margin="230,118,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="230,184,0,0" VerticalAlignment="Top" Width="43" RenderTransformOrigin="-4.133,3.65" Click="FindSum"/>
-        <Button x:Name="btnSubtract" Content="Subtract" HorizontalAlignment="Left" Margin="301,184,0,0" VerticalAlignment="Top" Width="49" RenderTransformOrigin="0.184,0.7"/>
+        <Button  Foreground="White" x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="230,156,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="-4.133,3.65" Click="FindSum" Background="#FFB22828"/>
+        <Button x:Name="btnSubtract" Content="Subtract" HorizontalAlignment="Left" Margin="301,156,0,0" VerticalAlignment="Top" Width="49" RenderTransformOrigin="0.184,0.7"/>
+        <Button x:Name="btnMultiply" Content="Multiply" HorizontalAlignment="Left" Margin="230,181,0,0" VerticalAlignment="Top" Width="56"/>
+        <Button x:Name="btnDivide" Content="Divide" HorizontalAlignment="Left" Margin="301,181,0,0" VerticalAlignment="Top" Width="49"/>
+        <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="41" Margin="64,10,0,0" VerticalAlignment="Top" Width="286">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFC31515" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Label FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"  Foreground="Yellow">My Simple Calculator</Label>
+        </Border>
 
 
 
