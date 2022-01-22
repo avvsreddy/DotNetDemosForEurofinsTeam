@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{683BBBD8-4CE5-4BA2-AE1A-58FBC341F485}</ProjectGuid>
+    <ProjectGuid>{E5C3006F-D8F1-4BA0-A9B6-DB84E7DC1A06}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MySimpleCalculator</RootNamespace>
-    <AssemblyName>MySimpleCalculator</AssemblyName>
+    <RootNamespace>CollectionBindingDemo</RootNamespace>
+    <AssemblyName>CollectionBindingDemo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,36 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Canvas.xaml.cs">
-      <DependentUpon>Canvas.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DockPanelDemo.xaml.cs">
-      <DependentUpon>DockPanelDemo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GridLayoutDemo.xaml.cs">
-      <DependentUpon>GridLayoutDemo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StackPannelLayout.xaml.cs">
-      <DependentUpon>StackPannelLayout.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UniformGridDemo.xaml.cs">
-      <DependentUpon>UniformGridDemo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WrapPannelDemo.xaml.cs">
-      <DependentUpon>WrapPannelDemo.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Dictionary1.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="DockPanelDemo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GridLayoutDemo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -97,24 +67,9 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Canvas.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StackPannelLayout.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UniformGridDemo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WrapPannelDemo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

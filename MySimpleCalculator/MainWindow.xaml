@@ -6,7 +6,14 @@
         xmlns:local="clr-namespace:MySimpleCalculator"
         mc:Ignorable="d"
         Title="My Simple Calculator" 
-        Height="250" Width="400">
+        Height="350" Width="400">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid Margin="0,0,0,4">
         <Label x:Name="label" Content="Enter First Number" HorizontalAlignment="Left" Margin="64,65,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Enter Second Number" HorizontalAlignment="Left" Margin="64,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="-11.264,-2.916"/>
@@ -14,7 +21,7 @@
         <TextBox x:Name="txtSno" HorizontalAlignment="Left" Height="23" Margin="230,118,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <Button  Foreground="White" x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="230,156,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="-4.133,3.65" Click="FindSum" Background="#FFB22828"/>
         <Button x:Name="btnSubtract" Content="Subtract" HorizontalAlignment="Left" Margin="301,156,0,0" VerticalAlignment="Top" Width="49" RenderTransformOrigin="0.184,0.7"/>
-        <Button x:Name="btnMultiply" Content="Multiply" HorizontalAlignment="Left" Margin="230,181,0,0" VerticalAlignment="Top" Width="56"/>
+        <Button x:Name="btnMultiply" Content="Multiply" HorizontalAlignment="Left" Margin="230,181,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="0.607,0.9"/>
         <Button x:Name="btnDivide" Content="Divide" HorizontalAlignment="Left" Margin="301,181,0,0" VerticalAlignment="Top" Width="49"/>
         <Border BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="41" Margin="64,10,0,0" VerticalAlignment="Top" Width="286">
             <Border.Background>
