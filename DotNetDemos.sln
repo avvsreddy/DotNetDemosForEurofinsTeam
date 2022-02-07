@@ -121,6 +121,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectBindingDemo", "Object
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionBindingDemo", "CollectionBindingDemo\CollectionBindingDemo.csproj", "{E5C3006F-D8F1-4BA0-A9B6-DB84E7DC1A06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{A343CEF6-1636-4E18-BD5A-8CA98A0FBEEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -287,6 +289,10 @@ Global
 		{E5C3006F-D8F1-4BA0-A9B6-DB84E7DC1A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5C3006F-D8F1-4BA0-A9B6-DB84E7DC1A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5C3006F-D8F1-4BA0-A9B6-DB84E7DC1A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A343CEF6-1636-4E18-BD5A-8CA98A0FBEEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A343CEF6-1636-4E18-BD5A-8CA98A0FBEEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A343CEF6-1636-4E18-BD5A-8CA98A0FBEEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A343CEF6-1636-4E18-BD5A-8CA98A0FBEEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -334,6 +340,7 @@ Global
 		{61E15062-6EB7-48B8-B97E-CCB283D5E091} = {F143391D-203E-418F-9B00-8DC3B77CCA2F}
 		{B40C3D79-741A-457F-8157-36987471E70A} = {F143391D-203E-418F-9B00-8DC3B77CCA2F}
 		{E5C3006F-D8F1-4BA0-A9B6-DB84E7DC1A06} = {F143391D-203E-418F-9B00-8DC3B77CCA2F}
+		{A343CEF6-1636-4E18-BD5A-8CA98A0FBEEC} = {F143391D-203E-418F-9B00-8DC3B77CCA2F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5787D6D9-8110-420F-B91A-4B02B06EF8A7}
